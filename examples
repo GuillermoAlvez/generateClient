@@ -6,5 +6,7 @@ dirb https://URL /usr/share/dirb/wordlists/spanish.txt -l | tee spanish.txt
 dirb https://URL /usr/share/dirb/wordlists/vulns/apache.txt -l | tee apache.txt
 con cookies:
 dirb http://URL -c .ASPAUTH="Cookie1"\;\ otraCookie="2sdwre" -l 
+#con -f y que busque extensiones
+dirb https://URL /usr/share/dirb/wordlists/big.txt -c ASP.NET_SessionId:"2rfsja3hed40biioun0flg2b" -l -X .aspx -f | tee  big-aspx.txt
 
 
